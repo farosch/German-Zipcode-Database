@@ -38,6 +38,19 @@ CREATE TABLE `zipcode` (
   `zipcode` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 )
+
+CREATE VIEW zip.joined
+	AS SELECT zip.city.name AS 'City',
+	zip.county.name AS 'County',
+	zip.state.name AS 'State',
+	zip.zipcode.zipcode AS 'Zipcode'
+FROM zip.city
+INNER JOIN zip.county
+	ON zip.city.county_id=zip.county.id
+INNER JOIN zip.state
+	ON zip.city.state_id=zip.state.id
+INNER JOIN zip.zipcode
+	ON zip.city.id=zip.zipcode.city_id;
 ```
 
 ## Credits
