@@ -1,12 +1,12 @@
 # German-Zipcode-Database
 
-**GERMANY ONLY!**
+**!!! GERMANY ONLY !!!**
 
 ## Whats this?
 This is a MySQL zipcode database for german addresses containing city, state and provinces
 
-Search for Zipcode:
-SELECT * FROM joined where Zipcode like 78052;
+## Query examples:
+### SELECT * FROM joined where Zipcode like 78052;
 
 ## Database structure
 ```
