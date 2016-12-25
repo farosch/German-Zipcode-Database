@@ -6,7 +6,8 @@
 This is a MySQL zipcode database for german addresses containing city, state and provinces
 
 ## Query examples:
-### SELECT * FROM joined where Zipcode like 78052;
+SELECT * FROM zip.joined where Zipcode like 78052;
+SELECT * FROM zip.zipcode INNER JOIN zip.city ON zip.zipcode.city_id=zip.city.id WHERE zip.city.name LIKE 'Miltenberg';
 
 ## Database structure
 ```
