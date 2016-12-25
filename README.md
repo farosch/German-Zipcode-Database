@@ -11,7 +11,7 @@ This is a MySQL zipcode database for german addresses containing city, state and
 
 ## Database structure
 ```
-CREATE TABLE `city` (
+CREATE TABLE `zip.city` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state_id` int(11) NOT NULL,
   `county_id` int(11) NOT NULL,
@@ -19,20 +19,20 @@ CREATE TABLE `city` (
   PRIMARY KEY (`id`)
 )
 
-CREATE TABLE `county` (
+CREATE TABLE `zip.county` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 )
 
-CREATE TABLE `state` (
+CREATE TABLE `zip.state` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 )
 
-CREATE TABLE `zipcode` (
+CREATE TABLE `zip.zipcode` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `city_id` int(11) NOT NULL,
   `zipcode` varchar(10) NOT NULL,
